@@ -11,10 +11,11 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <p class="text-white text-justify-center mx-3 my-0">¡Bienbenido <?php echo $usuario; ?> !</p>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
           <li class="nav-item">
-            <p class="text-white text-justify-center m-0">Bienbenido <?php echo $usuario; ?></p>
+            <a class="nav-link text-white px-4" href="../admin/index.php">Usuarios</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white px-4" href="../crud/edit.php?id=<?php echo $_SESSION['userId'] ?>">Perfil</a>

@@ -12,8 +12,6 @@
             $documento = $row['documento'];
             $correo = $row['correo'];
             $fechaRegistro = $row['fechaRegistro'];
-
-            echo $nombre . " " . $apellido;
         }
     }
 
@@ -40,14 +38,16 @@
         }
 
     }
-
-    if(10 > 23 && true){
-        
-    }
-
 ?>
 
 <?php include('../includes/header.php'); ?>
+
+<?php 
+    if($_SESSION['rol'] == 1){
+        include('../admin/menu.php');
+    }
+   
+?>
 
     
     <div class="container">

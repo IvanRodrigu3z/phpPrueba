@@ -12,10 +12,10 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <p class="text-white text-justify-center m-0">Bienbenido <?php echo $usuario; ?></p>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
           <li class="nav-item">
-            <p class="text-white text-justify-center m-0">Bienbenido <?php echo $usuario; ?></p>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white px-4" href="../salir.php">Salir <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></a>

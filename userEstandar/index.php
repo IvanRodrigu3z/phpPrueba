@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-md-4 mx-auto">
             <?php if(isset($_SESSION['message'])){?>
-                    <div class="alert alert-<?= $_SESSION['color']; ?> alert-dismissible fade show" role="alert">
+                    <div class="alert alert-<?= $_SESSION['color']; ?> alert-dismissible fade show mt-3" role="alert">
                         <?= $_SESSION['message']; ?>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>

@@ -2,7 +2,7 @@
 <?php include('includes/header.php') ?>
 <?php include('includes/menu.php') ?>
 
-    <div class="row ">
+    <div class="row m-0">
         <div class="col-3 m-auto mt-5">
         <div class="card text-bg-info mb-3 " style="max-width: 18rem;">
             <div class="card-header">Bienbenido!!!</div>

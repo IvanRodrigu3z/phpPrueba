@@ -16,14 +16,14 @@
                 <th></th>
             </thead>
             <?php 
-                $query = "SELECT usuario.id, usuario.nombre, usuario.apellido, usuario.documento, usuario.correo, rol.nombre, usuario.fechaRegistro FROM usuario INNER JOIN rol ON usuario.idRol = rol.id";
+                $query = "SELECT usuario.id, usuario.nombre, usuario.apellido, usuario.documento, usuario.correo, rol.nombreRol, usuario.fechaRegistro FROM usuario INNER JOIN rol ON usuario.idRol = rol.id";
                 $result = mysqli_query($conexion, $query);
                 while($row = mysqli_fetch_array($result)){ ?>
                 <tr>
                     <td><?php echo ($row['nombre'] . " " . $row['apellido']) ?></td>
                     <td><?php echo $row['documento'] ?></td>
                     <td><?php echo $row['correo'] ?></td>
-                    <td><?php echo $row['nombre'] ?></td>
+                    <td><?php echo $row['nombreRol'] ?></td>
                     <td><?php echo $row['fechaRegistro'] ?></td>
                     <td>
                         <a href="../crud/edit.php?id=<?php echo $row['id']?>" class="mx-2"><i class="fa-solid fa-pen-to-square"></i></a>
