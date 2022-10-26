@@ -1,0 +1,4 @@
+usuario administrador  correo: ivan@gmail.com
+			contraseña: 1234
+usuario estandar  correo: pandora@gmail.com
+		  contraseña: 1234
