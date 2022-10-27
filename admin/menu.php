@@ -5,7 +5,7 @@
     $usuario = $row['nombre'];
 ?>
 
-<nav class="navbar navbar-expand-lg bg-primary p-4">
+<nav class="navbar navbar-expand-lg bg-dark p-4">
   <div class="container">
     <a class="navbar-brand text-white" href="#"><i class="fa-solid fa-house"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
