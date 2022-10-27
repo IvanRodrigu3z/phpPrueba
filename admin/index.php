@@ -4,8 +4,8 @@
 <?php include('menu.php') ?> 
 
 <div class="container">
-    <!-- MAS INFORMACION -->
     <div class="row m-0 ">
+        <!-- MAS INFORMACION -->
         <div class="col-2 mt-5">
             <div class="row justify-content-between">
                 <?php 
@@ -49,6 +49,15 @@
         </div>
         <!-- LISTADO DE USUARIOS REGISTRADOS -->
         <div class="col-md-10 mx-auto mt-5">
+            <?php if(isset($_SESSION['message'])){?>
+                <div class="alert alert-<?= $_SESSION['color']; ?> alert-dismissible fade show p-2 small" role="alert">
+                    <?= $_SESSION['message']; ?>
+                    <button type="button" class="btn-close pt-2" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php 
+                unset($_SESSION['message']);
+                unset($_SESSION['color']);
+            }?>
             <table class="table table-striped shadow">
                 <thead class="bg-dark text-white">
                     <th>Nombres</th>

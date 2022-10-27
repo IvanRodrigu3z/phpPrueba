@@ -49,7 +49,10 @@ if(!empty($_POST['correo']) && !empty($_POST['contraseña'])){
                         <?= $_SESSION['message']; ?>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                <?php session_unset();}?>
+                <?php 
+                    unset($_SESSION['message']);
+                    unset($_SESSION['color']);
+                }?>
                 <form action="ingresar.php" method="POST">
                     <div class="form-group">
                         <label for="correo" class="form-label">Correo: </label>
