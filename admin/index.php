@@ -68,7 +68,7 @@
                     <th></th>
                 </thead>
                 <?php 
-                    $query = "SELECT usuario.id, usuario.nombre, usuario.apellido, usuario.documento, usuario.correo, rol.nombreRol, usuario.fechaRegistro FROM usuario INNER JOIN rol ON usuario.idRol = rol.id";
+                    $query = "SELECT usuario.id, usuario.nombre, usuario.apellido, usuario.documento, usuario.correo, rol.nombreRol, usuario.fechaRegistro FROM usuario INNER JOIN rol ON usuario.idRol = rol.id ORDER BY nombre ASC";
                     $result = mysqli_query($conexion, $query);
                     while($row = mysqli_fetch_array($result)){ ?>
                     <tr>

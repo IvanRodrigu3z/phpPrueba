@@ -1,3 +1,4 @@
+<?php include('db.php') ?>
 <?php include('includes/header.php') ?>
 <?php include('includes/menu.php') ?>
 
@@ -9,12 +10,21 @@
                 <h3 class="text-center">Registro de usuario</h3>
             </div>
             <div class="card-body p-5">
+                <?php if(isset($_SESSION['message'])){?>
+                    <div class="alert alert-<?= $_SESSION['color']; ?> alert-dismissible  p-2 small fade show" role="alert">
+                        <?= $_SESSION['message']; ?>
+                        <button type="button" class="btn-close pt-2" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php 
+                    unset($_SESSION['message']);
+                    unset($_SESSION['color']);
+                } ?>
                 <form action="crud/save.php" method="POST">
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
                                 <label for="nombre" class="form-label">Nombre: </label>
-                                <input type="text" class="form-control mb-3" name="nombre" placeholder="Ingrese su nombre" id="nombre" autofocus>
+                                <input type="text" class="form-control mb-3 <?php   ?> " name="nombre" placeholder="Ingrese su nombre" id="nombre" autofocus>
                             </div>
                         </div>
                         <div class="col-6">
@@ -32,14 +42,12 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-group mt-3">
-                                <div class="form-floating">
+                            <div class="form-group">
+                                <label for="tipoUser" class="form-label">Tipo usuario:</label>
                                     <select class="form-select" id="tipoUser" name="tipoUser">
+                                        <option value="2">Estandar</option>
                                         <option value="1">Administrador</option>
-                                        <option value="2">estandar</option>
                                     </select>
-                                    <label for="tipoUser">Tipo usuario:</label>
-                                </div>
                             </div>
                         </div>
                     </div>

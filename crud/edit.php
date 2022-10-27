@@ -16,7 +16,12 @@
     }
 
     if(isset($_POST['update'])){
-        $id = $_SESSION['userId'];
+        if($_SESSION['rol'] == "Administrador"){
+            $id = $_SESSION['userId'];
+        }else{
+            $id = $_GET['id'];
+        }
+
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $documento = $_POST['documento'];
